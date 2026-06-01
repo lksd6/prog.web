@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HelpDesk Smart Priority</title>
+</head>
+<body>
+  <h1>HelpDesk Smart Priority</h1>
+
+  <section>
+    <h2>Inicio de sesión</h2>
+    <form id="loginForm">
+      <input type="text" id="usuario" placeholder="Usuario" required>
+      <input type="password" id="password" placeholder="Contraseña" required>
+      <button type="submit">Iniciar sesión</button>
+    </form>
+    <p id="loginMensaje"></p>
+  </section>
+
+  <section>
+    <h2>Registrar ticket</h2>
+    <form id="ticketForm">
+      <input type="text" id="nombreSolicitante" placeholder="Nombre solicitante" required>
+      <input type="email" id="correo" placeholder="Correo" required>
+
+      <select id="categoria" required>
+        <option value="">Categoría</option>
+        <option value="hardware">Hardware</option>
+        <option value="software">Software</option>
+        <option value="red">Red</option>
+        <option value="cuenta">Cuenta</option>
+        <option value="otro">Otro</option>
+      </select>
+
+      <textarea id="descripcion" placeholder="Descripción" required></textarea>
+
+      <select id="impacto" required>
+        <option value="">Impacto</option>
+        <option value="bajo">Bajo</option>
+        <option value="medio">Medio</option>
+        <option value="alto">Alto</option>
+      </select>
+
+      <select id="urgencia" required>
+        <option value="">Urgencia</option>
+        <option value="baja">Baja</option>
+        <option value="media">Media</option>
+        <option value="alta">Alta</option>
+      </select>
+
+      <input type="number" id="tiempoEstimado" placeholder="Tiempo estimado en horas" required>
+
+      <select id="estado">
+        <option value="pendiente">Pendiente</option>
+        <option value="en proceso">En proceso</option>
+        <option value="resuelto">Resuelto</option>
+      </select>
+
+      <button type="submit">Crear ticket</button>
+    </form>
+    <p id="ticketMensaje"></p>
+  </section>
+
+  <section>
+    <h2>Tickets registrados</h2>
+    <button id="cargarTickets">Cargar tickets</button>
+    <div id="listaTickets"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
